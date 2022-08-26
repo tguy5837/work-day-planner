@@ -13,15 +13,18 @@ $(currentDay).text(function () {
 // console.log(timeCheck);
 
 $(".slot time").each(function () {
+    // get time slot time
     var currentTimeSlot = $(this).attr("datetime");
-    console.log("Time Slot: " + currentTimeSlot);
+
+    //turn into moment time
+    var time = moment(currentTimeSlot, "HH:mm").format("HH:mm");
+
+    console.log("Time Slot: " + time);
 
     var currentTime = moment().format("HH:mm");
     console.log("Current Time: " + currentTime);
 
-    if (currentTime > currentTimeSlot) {
+    if (moment().isAfter(time)) {
         $(".slot input").addClass("list-group-item-dark");
-    } else if (currentTime < currentTimeSlot) {
-        $(".slot input").addClass("list-group-item-danger");
-    }
-})
+    };
+});
