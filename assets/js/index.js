@@ -1,30 +1,23 @@
-// var
-
+// display the current day at the top of the screen
 $(currentDay).text(function () {
     var now = moment().format("dddd, MMM Do YYYY");
     return now;
 });
 
-// var checkTime = function () {
-
-// }
-
-// var timeCheck = $("time").attr("datetime");
-// console.log(timeCheck);
-
+// time check function
 $(".slot time").each(function () {
     // get time slot time
     var currentTimeSlot = $(this).attr("datetime");
+    console.log(currentTimeSlot);
 
-    //turn into moment time
-    var time = moment(currentTimeSlot, "HH:mm").format("HH:mm");
-
-    console.log("Time Slot: " + time);
-
-    var currentTime = moment().format("HH:mm");
+    var currentTime = moment().format("HH");
     console.log("Current Time: " + currentTime);
 
-    if (moment().isAfter(time)) {
-        $(".slot input").addClass("list-group-item-dark");
-    };
+    if (parseInt(currentTimeSlot) < parseInt(currentTime)) {
+        $(this).siblings("input").addClass("list-group-item-dark");
+    } else if (parseInt(currentTimeSlot) === parseInt(currentTime)) {
+        $(this).siblings("input").addClass("list-group-item-danger");
+    } else if (parseInt(currentTimeSlot) > parseInt(currentTime)) {
+        $(this).siblings("input").addClass("list-group-item-success");
+    }
 });
