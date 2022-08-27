@@ -1,47 +1,32 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Planner
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The purpose of this application is to provide a clean and simple interface which allows the user to input and save tasks by the hour for a 9am to 5pm workday. The current date is displayed at the top of the screen.
 
-The starter code uses the [Moment.js](https://momentjs.com/) library to work with date and time, but you're free to use a different JavaScript solution to handle this functionality because Moment.js is considered a "legacy" product. Learn more about these other solutions in the [Moment.js project status page.](https://momentjs.com/docs/#/-project-status/).
+With the time audit feature, the color of the time slots will change though out the work day, displaying past time slots as grey, the current time slot as red, and future time slots as green. When the user clicks a save button, any text, or lack there of, will be saved to local storage and loaded back to the window at a refresh so that tasks stay persistent.
 
-## User Story
+## Application Photos
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+![top of page](./assets/images/top-of-page.png)
 
-## Acceptance Criteria
+![bottom of page](./assets/images/time-slots.png)
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Built With
 
-The following animation demonstrates the application functionality:
+- HTML
+- CSS
+- JavaScript
+- Moment.js
+- Bootstrap
+- JQuery
 
-![Work Day Scheduler app with color-coded time slots shows a new event being typed in the 5PM slot.](./assets/images/05-third-party-apis-homework-demo.gif)
+### Website
 
-## Review
+https://tguy5837.github.io/js-quiz/
 
-You are required to submit the following for review:
+### GitHub Repository
 
-- The URL of the deployed application.
+https://github.com/tguy5837/js-quiz
 
-- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Contribution
 
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Created by Taylor Guy
