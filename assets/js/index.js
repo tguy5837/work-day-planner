@@ -19,6 +19,18 @@ $(currentDay).text(function () {
     return now;
 });
 
+// load tasks
+$(".slot time").each(function () {
+    var currentTimeSlot = $(this).attr("datetime");
+
+    console.log(localStorage.getItem(JSON.parse(currentTimeSlot)));
+
+    var localStorageValue = localStorage.getItem(JSON.parse(currentTimeSlot));
+    if (localStorageValue) {
+        $(this).siblings("input").val(localStorageValue.replace(/['"]+/g, ''));
+    };
+});
+
 
 // when button is clicked, the related input text is saved to local storage
 var saveTasks = function (event) {
