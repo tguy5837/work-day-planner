@@ -21,11 +21,11 @@ With the time audit feature, the color of the time slots will change though out 
 
 ### Website
 
-https://tguy5837.github.io/js-quiz/
+https://tguy5837.github.io/work-day-planner/
 
 ### GitHub Repository
 
-https://github.com/tguy5837/js-quiz
+https://github.com/tguy5837/work-day-planner
 
 ## Contribution
 
